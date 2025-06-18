@@ -119,21 +119,17 @@ function PureMultimodalInput({
         tabIndex={-1}
       />
 
-      <Textarea
-        ref={textareaRef}
-        placeholder="Send a message..."
-        value={input}
-        onChange={handleInput}
-        className={cx(
-          'min-h-[24px] max-h-[calc(75dvh)] overflow-hidden resize-none rounded-2xl !text-base bg-muted pb-10 dark:border-zinc-700',
-          className,
-        )}
-        rows={2}
-        autoFocus
-        onKeyDown={(event) => {
-          if (event.key === 'Enter' && !event.shiftKey) {
-            event.preventDefault();
-
+     <Textarea
+  ref={textareaRef}
+  placeholder="Send a message..."
+  value={input}
+  onChange={handleInput}
+  className="w-full rounded-md bg-white/10 backdrop-blur-md border border-white/20 text-white px-4 py-2 placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+  rows={2}
+  autoFocus
+  onKeyDown={(event) => {
+    if (event.key === 'Enter' && !event.shiftKey) {
+      event.preventDefault();
             if (isLoading) {
               toast.error('Please wait for the model to finish its response!');
             } else {
