@@ -2,13 +2,10 @@ import { Chat } from "@/components/chat";
 
 export default function Home() {
   return (
-    <div
-      className="min-h-screen bg-cover bg-center flex items-center justify-center"
-      style={{ backgroundImage: "url('/spinbot-card-bg.png')" }}
-    >
-      <div className="w-[90%] max-w-3xl h-[85vh] bg-transparent backdrop-blur-sm p-4 rounded-xl shadow-xl border border-white/20 overflow-hidden">
+    <main className="min-h-screen bg-white flex items-center justify-center p-4">
+      <div className="w-full max-w-3xl h-[90vh] bg-gray-100 rounded-xl shadow-xl p-6">
         <Chat />
       </div>
-    </div>
+    </main>
   );
 }
