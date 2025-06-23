@@ -1,13 +1,13 @@
 'use client';
 
-import { Chat } from "@/components/chat";
+import { Chat } from '@/components/chat';
 
-export default function Home() {
+export default function Page() {
   return (
-    <main className="min-h-screen bg-white flex items-center justify-center p-4">
-      <div className="w-full max-w-3xl h-[90vh] bg-gray-100 rounded-xl shadow-xl p-6">
+    <div className="flex justify-center items-center min-h-screen bg-gray-100">
+      <div className="w-[90%] max-w-3xl h-[85vh] bg-white p-4 rounded-md shadow-md">
         <Chat id="spinbot" selectedModelId="gpt-4" />
       </div>
-    </main>
+    </div>
   );
 }
